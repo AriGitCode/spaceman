@@ -7,19 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-        <h1>Space Defender</h1>
-        <button id="modal-btn">Discover the Game</button>
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p></p>
-            </div>
-          
-          </div>
+
+<h1>Space Defender</h1>
+
+    <section class="modal hidden"> <!---will serve as  modal container.-->
+        <div class="flex">
+            <button class="btn-close">⨉</button>
+        </div>
+        <div>
+            <p>
+              Aliens secretly arrived on Earth and conducted a thorough exploration of our planet and all living beings. 
+              However, there is the problem: they are about to begun constructing a rocket with the intent of promptly informing their race on how to conquer Earth. 
+              With their advanced technology, they will complete the rocket in an incredibly short amount of time. 
+              Fortunately, the aliens always follow instructions and always leave a code for self-destruction...
+              As the most skilled linguist on the entire planet, you have been entrusted with the task of uncovering this password,
+              allowing humanity to survive and thrive.
+            </p>
+        </div>
+    </section>   
+    
+    <div class="overlay hidden"> </div> <!---will serve as overlay element,hidden class added to the modal and the overlay element. we'll target these to hide modal and overlay using CSS-->
+   
+        
 <div class="container">
-    <section>
-        <span></span>
+    <section class="shooting-stars">
+       <button class="btn-open">Discover about Game</button> <!---btn and btn-open Serve as modal button so it fires up our modal when you click this button.-->
+       <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -31,11 +44,9 @@
         <span></span>
     </section>
         <div class="btn-holder">
-            
             <a class="level" href="/game.html" role="button">Level: EASY</a>
             <a class="level" href="/game.html" role="button">Level: INSANE</a>
         </div>
-    </div>
 </div>
 <script src="script.js"></script>
 </body>
