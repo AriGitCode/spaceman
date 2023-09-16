@@ -105,3 +105,11 @@ button:hover{
   font-weight: bolder;
   text-align: center;
 }
+#rocket-container{
+  float: right;
+  background-image: transparent url("rocket.jpg");
+  width: 250px;
+  border: 10px;
+  padding: 20px;
+  margin-right: 20px;
+}

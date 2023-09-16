@@ -5,10 +5,44 @@ let letterBtn = document.querySelector("#alphabet");  // Select the keyboard ele
 let guessedAttempts = 0;
 let failedAttmepts = 0;
 
+
+
 for( let i = 0; i < currentWord.length; i++){      // Create placeholders for each letter in the word.
     let newLetter = document.createElement("li");    // Create a new list item element for each letter.
-    newLetter.className = "letters";      // Add a CSS class for styling 
+    newLetter.classList.add("letters");      // Add a CSS class for styling 
     displayWord.append(newLetter);         // Append the new letter element to the display area.
+}
+
+let constuctor = document.querySelector("#rocket-container");
+function constructRocket(){
+    if(failedAttmepts===1){
+        constuctor.src = "rocket.jpg";
+    }
+    if(failedAttmepts===2){
+        constuctor.src = "real-astro.png";
+    }
+    if(failedAttmepts===3){
+        constuctor.src = "spacemann.png";
+    }
+    if(failedAttmepts===4){
+        constuctor.src = "real-astro.png";
+    }
+    if(failedAttmepts===5){
+        constuctor.src = "rocket.jpg";
+    }
+    if(failedAttmepts===6){
+        constuctor.src = "real-astro.png";
+    }
+    if(failedAttmepts===7){
+        constuctor.src = "spacemann.png";
+    }
+    if(failedAttmepts===8){
+        constuctor.src = "rocket.jpg";
+    }
+    if(failedAttmepts===9){
+        constuctor.src = "spacemann.png";
+        alert("You couldn't guess the word, the spacehip is constructed! you failed th mission!")
+    }
 }
 
 letterBtn.addEventListener("click", function(e){  // Add a click event listener to the keyboard.
@@ -25,9 +59,13 @@ letterBtn.addEventListener("click", function(e){  // Add a click event listener 
                 listOfLetters[i].innerHTML = clickedLetter;
                 contains = true;
             }
+            if(guessedAttempts ===currentWord.length){
+                alert("Yo won!Play again?")
+            }
         }
         if(!contains){
             failedAttmepts += 1;
+            constructRocket()
         } 
         // Disable the clicked button.
         
