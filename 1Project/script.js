@@ -1,13 +1,13 @@
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
+let modal = document.querySelector(".modal");
+let overlay = document.querySelector(".overlay");
+let openModalBtn = document.querySelector(".btn-open");
+let closeModalBtn = document.querySelector(".btn-close");
 
-const openModal = function () {
+let openModal = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
-const closeModal = function () {
+let closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
