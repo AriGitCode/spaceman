@@ -1,8 +1,8 @@
 
 body {
-  background-image: url("/images/3astro-interstellar.jpeg");
-  background-size: content;
-  background-repeat: no-repeat;
+  /*background-image: url("/images/3interstellar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;*/
   font-family:  "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: rgb(55,64,95);
 }
@@ -16,6 +16,11 @@ body {
   left: 0;
   border-radius: 3px;
 }
+#timer{
+margin-left: 40px;
+color:azure;
+font-size: 30px;
+}
 
 h1{
   text-align:center;
@@ -27,7 +32,7 @@ h1{
 .guess-attempt{
   margin-left: 50px;
   font-size: 30px;
-  color: azure;
+  color: rgb(147, 211, 235);
 }
 
 #alphabet{
@@ -77,4 +82,48 @@ button:hover{
   border: 10px;
   padding: 20px;
   margin-right: 20px;
+}
+#modalWins {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 500px;
+  padding: 20px;
+  min-height: 250px;
+  position: absolute;
+  top: 20%;
+  background-color: rgb(80, 76, 114);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  z-index: 2;
+  
+}
+#modalFails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 500px;
+  padding: 20px;
+  min-height: 250px;
+  position: absolute;
+  top: 20%;
+  background-color: rgb(80, 76, 114);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+p, .win, .fail{
+  font-size: 0.9rem;
+  color: #faf7f7;
+  margin: 0.4rem 0 0.2rem;
+  text-align: center;
+}
+.hidden {
+  visibility: hidden;
+}
+.restartBtn{
+  margin: 40px;
 }

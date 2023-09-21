@@ -10,7 +10,6 @@
     background-color: #030208;
     background-image: url("/images/lonely-austro.png");
     background-size: cover;
-    /*background-position: center center;*/
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -19,11 +18,8 @@
 }
 
 .modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 500px;
-    padding: 1.3rem;
+    padding: 20px;
     min-height: 250px;
     position: absolute;
     top: 20%;
@@ -32,64 +28,79 @@
     border-radius: 15px;
     z-index: 2;
   }
-  
-  .modal .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .modal input {
-    padding: 0.7rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.9em;
-  }
-  
+
   .modal p {
-    font-size: 0.9rem;
+    font-size: 15px;
     color: #faf7f7;
-    margin: 0.4rem 0 0.2rem;
-  }
-  
-   .btn-open {  
-    cursor: pointer;
-    font-weight: 600;
-    position: absolute;
-    top: 130px;
-    display: inline-block;
-    padding:15px ;
-    font-weight: 700;
-    background-color: rgba(0, 0, 0, 0.505);
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1em;
-  }
-  
-  .btn-close {
-    transform: translate(10px, -20px);
-    padding: 0.5rem 0.7rem;
-    background: #eee;
-    border-radius: 50%;
+    margin: 3px;
   }
 
-  .overlay {
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
+   .openBtn{  
+    background-color: rgba(3, 17, 34, 0.415);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    position: absolute;
+    top: 130px;
+    padding: 15px;
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    z-index: 2;
   }
+  
+  .closeBtn{
+    background: #eee;
+    border-radius: 50%;
+    transform: translate(-1px, -10px);
+    padding: 7px 10px;
+  }
+
   .hidden {
     display: none;
   }
   
+  h1{
+    margin: 25px;
+    font-size: 50px;
+    color: azure;
+    text-align:center;
+}
+
+.btn-holder{
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+ 
+   .levelBtn{
+    border:0;
+    border-radius: 30px;
+    background: rgb(35,108,185);
+    color: #fc850f;
+    cursor: pointer;
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 20px;
+    outline: 0;
+    margin: 30px;
+    padding: 10px 20px;
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+    box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(78, 192, 229) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transition: all 0.2s;                         
+  } 
+  .levelBtn:hover{
+    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transform: scale(1.01);
+    }
 /* Below shooting stars code I implemented from ..., made some changes, tried to understand the concept*/
 .shooting-stars{
     position: absolute;
@@ -101,10 +112,10 @@
 
 @keyframes animateBg{
     0%,100%{
-        transform: scale(1);
+     transform: scale(1);
     }
     50%{
-        transform: scale(1.2);
+     transform: scale(1.2);
     }
 }
 
@@ -216,42 +227,6 @@ span:nth-child(10){
     animation-duration: 2.75s;
 }
 
-h1{
-    margin: 25px;
-    font-size: 50px;
-    color: azure;
-    text-align:center;
-}
-.btn-holder{
-    position: absolute;
-    bottom: 20px; 
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
- 
-   .level{
-    border:0;
-    border-radius: 30px;
-    background: rgb(35,108,185);
-    color: #fc850f;
-    cursor: pointer;
-    display: block;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 20px;
-    outline: 0;
-    margin: 30px;
-    padding: 10px 20px;
-    position: relative;
-    top: 5px;
-    text-decoration: none;
-    box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(78, 192, 229) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-    transition: all 0.2s;                          /*rgb(246, 84, 174) 0px 0px 0px 4px,*/
-  } 
-    .level:hover{
-        box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-        transform: scale(1.01);
-    }
+
     
    

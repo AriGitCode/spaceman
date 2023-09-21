@@ -106,23 +106,39 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  align-items: center;
   width: 500px;
   padding: 20px;
   min-height: 250px;
-  position: absolute;
-  top: 20%;
+  position: fixed; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   background-color: rgb(80, 76, 114);
   border: 1px solid #ddd;
   border-radius: 15px;
-  z-index: 2;
   
 }
-p  {
-  font-size: 0.9rem;
+#modalFails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+  min-height: 250px;
+  position: fixed; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(80, 76, 114, 0.804);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+p, .win, .fail{
+  font-size: 15px;
   color: #faf7f7;
-  margin: 0.4rem 0 0.2rem;
- 
+  margin: 4px 0 2px;
+  text-align: center;
 }
 .hidden {
   visibility: hidden;
