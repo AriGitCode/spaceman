@@ -8,7 +8,7 @@
  body{
    overflow: hidden;
     background-color: #030208;
-    background-image: url("/images/lonely-austro.png");
+    background-image: url("images/lonely-austro.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
