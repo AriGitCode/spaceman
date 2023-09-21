@@ -19,31 +19,31 @@ for( let i = 0; i < currentWord.length; i++){
 let constuctor = document.querySelector("#rocket-container");
 function constructRocket(){
     if(failedAttmepts===1){
-        constuctor.src = "images/1.png";
-    }
-    if(failedAttmepts===2){
         constuctor.src = "images/2.png";
     }
-    if(failedAttmepts===3){
+    if(failedAttmepts===2){
         constuctor.src = "images/3.png";
     }
-    if(failedAttmepts===4){
+    if(failedAttmepts===3){
         constuctor.src = "images/4.png";
     }
-    if(failedAttmepts===5){
+    if(failedAttmepts===4){
         constuctor.src = "images/5.png";
     }
-    if(failedAttmepts===6){
+    if(failedAttmepts===5){
         constuctor.src = "images/6.png";
     }
-    if(failedAttmepts===7){
+    if(failedAttmepts===6){
         constuctor.src = "images/7.png";
     }
-    if(failedAttmepts===8){
+    if(failedAttmepts===7){
         constuctor.src = "images/8.png";
     }
-    if(failedAttmepts===9){
+    if(failedAttmepts===8){
         constuctor.src = "images/9.png";
+    }
+    if(failedAttmepts===9){
+        constuctor.src = "images/rocket.gif";
         modalFails.classList.remove("hidden"); 
     }
 }

@@ -2,22 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
 body  {
-    font-family: 'Source Code Pro', monospace;
-    color: azure;
-    background-image: url('images/2lonely-astro.png');
-        background-size: cover;
-        -webkit-animation: slidein 100s;
-        animation: slidein 100s;
-
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-
-        -webkit-animation-direction: alternate;
-        animation-direction: alternate;   
-          animation-duration: 10s;         
+  font-family: 'Source Code Pro', monospace;
+  color: azure;
+  background-image: url('images/2lonely-astro.png');
+  background-size: cover;
+  animation: slidein 100s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;   
+  animation-duration: 10s;         
 }
 
 @-webkit-keyframes slidein {
@@ -95,7 +88,6 @@ button:hover{
 }
 #rocket-container{
   float: right;
-  background-image: transparent url("rocket.jpg");
   width: 250px;
   border: 10px;
   padding: 20px;

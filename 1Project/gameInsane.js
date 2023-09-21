@@ -1,4 +1,4 @@
-let currentWordArr = ["function", "object", "const", "constructor", ""];    // Define the word to be guessed.
+let currentWordArr = ["function", "object", "const", "constructor", "global"];    // Define the word to be guessed.
 let currentWord = currentWordArr[Math.floor(Math.random() * currentWordArr.length)];
 let displayWord = document.querySelector(".display-word"); // Select the element that will display the word's placeholders.
 let modalWins = document.querySelector("#modalWins"); 
@@ -45,47 +45,49 @@ function newTimer() {
     constructRocket();
 }
 
-for(let i = 0; i < currentWord.length; i++){      // Create placeholders for each letter in the word.
-    let newLetter = document.createElement("li");    // Create a new list item element for each letter.
-    newLetter.classList.add("letters");      // Add a CSS class for styling 
-    displayWord.append(newLetter);         // Append the new letter element to the display area.
+for(let i = 0; i < currentWord.length; i++){      
+    let newLetter = document.createElement("li");    
+    newLetter.classList.add("letters");      
+    displayWord.append(newLetter);         
 }
 
 let constuctor = document.querySelector("#rocket-container");
 function constructRocket(){
     let maxStage = Math.max(failedAttmepts, stage)
     if(maxStage===1){
-        constuctor.src = "images/1.png";
+        constuctor.src = "images/i1.png";
     }
     if(maxStage===2){
-        constuctor.src = "images/2.png";
+        constuctor.src = "images/i2.png";
     }
     if(maxStage===3){
-        constuctor.src = "images/3.png";
+        constuctor.src = "images/i3.png";
     }
     if(maxStage===4){
-        constuctor.src = "images/7.png";
+        constuctor.src = "images/i4.png";
     }
     if(maxStage===5){
-        constuctor.src = "images/8.png";
+        constuctor.src = "images/i5.png";
     }
     if(maxStage===6){
-        constuctor.src = "images/9.png";
+        constuctor.src = "images/i6.png";
         modalFails.classList.remove("hidden"); 
     }
+    let fails = document.getElementById("attempt");
+    fails.innerHTML = maxStage + "/6";
 }
 
-letterBtn.addEventListener("click", function(e){  // Add a click event listener to the keyboard.
-    e.preventDefault()     // Prevent the default form submission behavior
+letterBtn.addEventListener("click", function(e){ 
+    e.preventDefault()    
     console.log(e);
-    let clickedLetterBtn = e.target; // Get the clicked button element.
+    let clickedLetterBtn = e.target; 
     if(e.target.tagName.toLowerCase() === 'button'){
         let clickedLetter = clickedLetterBtn.innerHTML;
         let listOfLetters = document.getElementsByClassName("letters");
         let contains = false;
-        for(let i = 0; i < wordLength; i++){     // Loop through each character in the word.
+        for(let i = 0; i < wordLength; i++){     
             if(currentWord.charAt(i)=== clickedLetter){ 
-                guessedAttempts += 1; // Check if the current character matches the clicked letter.
+                guessedAttempts += 1; 
                 listOfLetters[i].innerHTML = clickedLetter;
                 contains = true;
             }
@@ -97,13 +99,9 @@ letterBtn.addEventListener("click", function(e){  // Add a click event listener 
             failedAttmepts += 1;
             constructRocket()
         } 
-        // Disable the clicked button.
       
         clickedLetterBtn.disabled = true;
-        clickedLetterBtn.style.visibility = "hidden";// Get the letter from the clicked button.
-        let fails = document.getElementById("attempt");
-        console.log(fails);
-        fails.innerHTML = failedAttmepts+ "/6";
+        clickedLetterBtn.style.visibility = "hidden";
     }
      
 });

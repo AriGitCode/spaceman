@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gameInsane.css">
+    <title>Document</title>
+</head>
+<body>
+    <video controls width="250">
+        <source src="/images/astro-video.mp4" type="video/webm" />
+      
+       
+    <div class="center">
+        <h1>Space Defender</h1>
+        <div class="letter-container">
+                <p id="timer">01:00</p>
+
+            <h2 class="guess-attempt">Guessing attempts: <b id="attempt">0/6</b></h2>
+            
+            <div id="alphabet">  
+                <div class="clicker">
+                    <button>a</button><button>b</button><button>c</button><button>d</button><button>e</button><button>f</button><button>g</button>
+                    <button>h</button><button>i</button><button>j</button><button>k</button><button>l</button><button>m</button><button>n</button>
+                </div>
+                <div id="clicker">
+                    <button>o</button><button>p</button><button>q</button><button>r</button><button>s</button><button>t</button><button>u</button>
+                    <button>v</button><button>w</button><button>x</button><button>y</button><button>z</button>
+                </div>
+            </div>
+            <ul class="display-word"> 
+            
+            </ul>
+        </div>
+
+        <div id="modalWins" class="hidden">
+            <p>
+                <b class="win">🪩You saved the 🌎 planet from destroying!</b>
+            </p>
+            <button class ="restartBtn" onClick="window.location.reload()">Restart the Game</button>
+        
+        </div>
+        <div id="modalFails" class="hidden">
+            <p>
+                <b class="fail">Unfortunately you failed!</b><br/> Alliens have constructed the 🚀spaceship and all the data will be transmitted to the Allien Star ☄️
+            </p>
+            <button class ="restartBtn" onClick="window.location.reload()">Restart the Game</button>
+        </div>
+   
+        <img id="rocket-container" src="">
+    </div>
+    
+
+    <script src="gameInsane.js"></script>
+</body>
+</html>

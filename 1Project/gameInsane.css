@@ -1,12 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 body {
-  /*background-image: url("images/3interstellar.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;*/
-  font-family:  "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: rgb(55,64,95);
+  font-family: 'Source Code Pro', monospace;
+  background-color: rgb(49, 44, 193);
+  color: azure;
 }
-
+.background-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .center{
   position: absolute;
   margin: 0;
@@ -18,21 +21,18 @@ body {
 }
 #timer{
 margin-left: 40px;
-color:azure;
 font-size: 30px;
 }
 
 h1{
   text-align:center;
-  color:rgb(147, 211, 235);
   text-transform:uppercase;
   margin-bottom: 40px;
 }
 
 .guess-attempt{
-  margin-left: 50px;
+  margin-left: 40px;
   font-size: 30px;
-  color: rgb(147, 211, 235);
 }
 
 #alphabet{
@@ -77,48 +77,47 @@ button:hover{
 }
 #rocket-container{
   float: right;
-  background-image: transparent url("rocket.jpg");
-  width: 250px;
+  width: 200px;
   border: 10px;
   padding: 20px;
   margin-right: 20px;
+  transform: translate(-60%, -60%);
 }
 #modalWins {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  align-items: center;
   width: 500px;
   padding: 20px;
   min-height: 250px;
-  position: absolute;
-  top: 20%;
-  background-color: rgb(80, 76, 114);
-  border: 1px solid #ddd;
+  position: fixed; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(80, 76, 114, 0.804);
+  border: 1px solid #3a4fb0;
   border-radius: 15px;
-  z-index: 2;
-  
 }
 #modalFails{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  align-items: center;
   width: 500px;
   padding: 20px;
   min-height: 250px;
-  position: absolute;
-  top: 20%;
-  background-color: rgb(80, 76, 114);
-  border: 1px solid #ddd;
+  position: fixed; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(80, 76, 114, 0.804);
+  border: 1px solid #3a4fb0;
   border-radius: 15px;
-  z-index: 2;
 }
 
-p, .win, .fail{
-  font-size: 0.9rem;
+ .win, .fail{
+  font-size: 15px;
   color: #faf7f7;
-  margin: 0.4rem 0 0.2rem;
+  margin: 4px 0 2px;
   text-align: center;
 }
 .hidden {

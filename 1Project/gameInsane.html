@@ -7,14 +7,19 @@
     <title>Level Insane</title>
 </head>
 <body>
-    
       
     <div class="center">
+        <div class="video">
+
+            <video autoplay loop muted plays-inline class="background-video">
+                <source src="images/astro-video.mp4" type="video/mp4">
+            </video>
+        </div>
         <h1>Space Defender</h1>
         <div class="letter-container">
                 <p id="timer">01:00</p>
 
-            <h2 class="guess-attempt">Guessing attempts: <b id="attempt">0/6</b></h2>
+            <h2 class="guess-attempt">Rocket's part to be built: <b id="attempt">0/6</b></h2>
             
             <div id="alphabet">  
                 <div class="clicker">
@@ -32,15 +37,15 @@
         </div>
 
         <div id="modalWins" class="hidden">
-            <p>
-                <b class="win">🪩You saved the 🌎 planet from destroying!</b>
+            <p class="win">
+                🪩You saved the 🌎 planet from destroying!</b>
             </p>
             <button class ="restartBtn" onClick="window.location.reload()">Restart the Game</button>
         
         </div>
         <div id="modalFails" class="hidden">
-            <p>
-                <b class="fail">Unfortunately you failed!</b><br/> Alliens have constructed the 🚀spaceship and all the data will be transmitted to the Allien Star ☄️
+            <p class="fail">
+                Unfortunately you failed!<br/> Alliens have constructed the 🚀spaceship and all the data will be transmitted to the Allien Star ☄️
             </p>
             <button class ="restartBtn" onClick="window.location.reload()">Restart the Game</button>
         </div>
