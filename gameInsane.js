@@ -1,10 +1,10 @@
 let currentWordArr = ["function", "object", "const", "constructor", "global"];    
 let currentWord = currentWordArr[Math.floor(Math.random() * currentWordArr.length)];
-let displayWord = document.querySelector(".display-word"); // Select the element that will display the word's placeholders.
+let displayWord = document.querySelector(".display-word"); 
 let modalWins = document.querySelector("#modalWins"); 
 let modalFails = document.querySelector("#modalFails"); 
-let wordLength = currentWord.length;                  // Get the length of the word.
-let letterBtn = document.querySelector("#alphabet");  // Select the keyboard element.
+let wordLength = currentWord.length;                
+let letterBtn = document.querySelector("#alphabet"); 
 let guessedAttempts = 0;
 let failedAttmepts = 0;
 let stage = 0;
