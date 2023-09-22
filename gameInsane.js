@@ -1,4 +1,4 @@
-let currentWordArr = ["function", "object", "const", "constructor", "global"];    // Define the word to be guessed.
+let currentWordArr = ["function", "object", "const", "constructor", "global"];    
 let currentWord = currentWordArr[Math.floor(Math.random() * currentWordArr.length)];
 let displayWord = document.querySelector(".display-word"); // Select the element that will display the word's placeholders.
 let modalWins = document.querySelector("#modalWins"); 
@@ -29,7 +29,7 @@ function newTimer() {
     if(countTime === 30){
         stage = 3      
     }
-    if(countTime === 30){
+    if(countTime === 20){
         stage = 4      
     }
     if(countTime === 10){
