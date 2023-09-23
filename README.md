@@ -48,3 +48,5 @@ I would like to add the timer to specific level to increase tension and urgency.
 I would like to have the choice to turn music on or off while it plays in the background.
 I would like to offer a player the option to use hints  to make the game more accessible.
 I would like to enhance the game's code and experience, making Spaceman more engaging, easy to understand and enjoyable.
+
+!The current state of the game lacks a responsive design, I understand that it is important for providing an optimal user experience across various devices and screen sizes, and my next goal will be to implement it.

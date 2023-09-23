@@ -1,18 +1,19 @@
 let currentWordArr = ["function", "object", "const", "constructor", "global"];    
 let currentWord = currentWordArr[Math.floor(Math.random() * currentWordArr.length)];
 let displayWord = document.querySelector(".display-word"); 
-let modalWins = document.querySelector("#modalWins"); 
-let modalFails = document.querySelector("#modalFails"); 
 let wordLength = currentWord.length;                
 let letterBtn = document.querySelector("#alphabet"); 
+
 let guessedAttempts = 0;
 let failedAttmepts = 0;
+let modalWins = document.querySelector("#modalWins"); 
+let modalFails = document.querySelector("#modalFails"); 
 let stage = 0;
+
 
 let startMin = 1;
 let countTime = startMin * 59;
 let timer = document.getElementById("timer");
-
 let interval = setInterval(newTimer, 1000);
 
 function newTimer() {
@@ -37,7 +38,7 @@ function newTimer() {
     }
     if(countTime === 0){
         stage = 6
-        modalFails.classList.remove("hidden"); 
+        modalFails.classList.remove("hidden");   
     }
     if(countTime === -1){
         clearInterval(interval);
@@ -49,32 +50,6 @@ for(let i = 0; i < currentWord.length; i++){
     let newLetter = document.createElement("li");    
     newLetter.classList.add("letters");      
     displayWord.append(newLetter);         
-}
-
-let constuctor = document.querySelector("#rocket-container");
-function constructRocket(){
-    let maxStage = Math.max(failedAttmepts, stage)
-    if(maxStage===1){
-        constuctor.src = "images/i1.png";
-    }
-    if(maxStage===2){
-        constuctor.src = "images/i2.png";
-    }
-    if(maxStage===3){
-        constuctor.src = "images/i3.png";
-    }
-    if(maxStage===4){
-        constuctor.src = "images/i4.png";
-    }
-    if(maxStage===5){
-        constuctor.src = "images/i5.png";
-    }
-    if(maxStage===6){
-        constuctor.src = "images/i6.png";
-        modalFails.classList.remove("hidden"); 
-    }
-    let fails = document.getElementById("attempt");
-    fails.innerHTML = maxStage + "/6";
 }
 
 letterBtn.addEventListener("click", function(e){ 
@@ -105,3 +80,30 @@ letterBtn.addEventListener("click", function(e){
     }
      
 });
+
+let constuctor = document.querySelector("#rocket-container");
+function constructRocket(){
+    let maxStage = Math.max(failedAttmepts, stage)
+    if(maxStage===1){
+        constuctor.src = "images/i1.png";
+    }
+    if(maxStage===2){
+        constuctor.src = "images/i2.png";
+    }
+    if(maxStage===3){
+        constuctor.src = "images/i3.png";
+    }
+    if(maxStage===4){
+        constuctor.src = "images/i4.png";
+    }
+    if(maxStage===5){
+        constuctor.src = "images/i5.png";
+    }
+    if(maxStage===6){
+        constuctor.src = "images/i6.png";
+        modalFails.classList.remove("hidden"); 
+    }
+    let fails = document.getElementById("attempt");
+    fails.innerHTML = maxStage + "/6";
+}
+
