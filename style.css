@@ -101,7 +101,7 @@
     box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
     transform: scale(1.01);
     }
-/* Below shooting stars code I implemented from ..., made some changes, tried to understand the concept*/
+/* Below shooting stars code I implemented from floating effect, made some changes, tried to understand the concept*/
 .shooting-stars{
     position: absolute;
     top: 0;

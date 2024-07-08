@@ -143,6 +143,7 @@ p, .win, .fail{
   margin: 4px 0 2px;
   text-align: center;
 }
+
 .hidden {
   visibility: hidden;
 }

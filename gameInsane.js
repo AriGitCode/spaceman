@@ -36,11 +36,11 @@ function newTimer() {
     if(countTime === 10){
         stage = 5      
     }
-    if(countTime === 0){
+    if(countTime === 1){
         stage = 6
-        modalFails.classList.remove("hidden");   
+        modalFails.classList.remove("hidden");  
     }
-    if(countTime === -1){
+    if(countTime === 0){
         clearInterval(interval);
     }
     constructRocket();
@@ -54,12 +54,13 @@ for(let i = 0; i < currentWord.length; i++){
 
 letterBtn.addEventListener("click", function(e){ 
     e.preventDefault()    
-    console.log(e);
     let clickedLetterBtn = e.target; 
+
     if(e.target.tagName.toLowerCase() === 'button'){
         let clickedLetter = clickedLetterBtn.innerHTML;
         let listOfLetters = document.getElementsByClassName("letters");
         let contains = false;
+
         for(let i = 0; i < wordLength; i++){     
             if(currentWord.charAt(i)=== clickedLetter){ 
                 guessedAttempts += 1; 
